@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  php_fpm:
+      build: .
+      container_name: kudoshell_php_fpm
+      restart: always
+      working_dir: /usr/share/nginx/kudoshell
+      networks:
+          - kudoshell
+      volumes:
+          - ./:/usr/share/nginx/kudoshell
+          - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+
+  nginx:
+      image: nginx:1.18
+      container_name: kudoshell_nginx
+      restart: always
+      working_dir: /usr/share/nginx/kudoshell
+      networks:
+          - kudoshell
+      ports:
+          - "443:443"
+      volumes:
+          - ./:/usr/share/nginx/kudoshell
+          - ./docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+          - ./docker/nginx/ssl/try2kudoshell.com.crt:/etc/nginx/ssl/try2kudoshell.com.crt
+          - ./docker/nginx/ssl/try2kudoshell.com.key:/etc/nginx/ssl/try2kudoshell.com.key
+
+networks:
+  kudoshell:
+    driver: bridge
