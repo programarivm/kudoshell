@@ -4,13 +4,11 @@
 	<img src="https://github.com/programarivm/kudoshell/blob/master/resources/logo.jpg" />
 </p>
 
-<p align="center">
-	Allow your community to earn cute kudos with the [Roll API](https://docs.tryroll.com/).
-</p>
+Are you an artist, podcaster or streamer? Do you have a network of followers? If so, it is high time for your community to earn cute kudos with the [Roll API](https://docs.tryroll.com/).
 
-### Intro
+### Embedding Kudos Into Websites
 
-Are you an artist, podcaster or streamer? Do you have a network of followers? If so, it is high time for your community to earn cute kudos!
+Kudoshell is an easy-to-use embeddable HTML form that allows your community to earn kudos. It can be easily revamped into a variety of flavors such as a WordPress plugin.
 
 ### Development
 
